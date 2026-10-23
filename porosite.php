@@ -35,10 +35,10 @@ $filtruar = array_filter($porosite, function ($p) use ($kerko, $statusi) {
     <nav>
         <a href="#">▦ <span>Dashboard</span></a>
         <a href="#">⬡ <span>Produktet</span></a>
-        <a href="#" class="active">🛒 <span>Porositë</span></a>
+        <a href="porosite" class="active">🛒 <span>Porositë</span></a>
         <a href="#">♧ <span>Klientët</span></a>
         <a href="#">▤ <span>Raportet</span></a>
-        <a href="#">⚙ <span>Cilësimet</span></a>
+        <a href="cilsimet">⚙ <span>Cilësimet</span></a>
     </nav>
 
     <a href="#" class="logout">⇥ Dil nga llogaria</a>
