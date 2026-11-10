@@ -56,15 +56,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     PASSWORD_DEFAULT
                 );
 
-                $stmt = $pdo->prepare(
-                    "INSERT INTO users (username, email, password)
-                     VALUES (:username, :email, :password)"
+            $stmt = $pdo->prepare(
+                "INSERT INTO users (fullname, username, email, password)
+                VALUES (:fullname, :username, :email, :password)"
                 );
 
-                $stmt->execute([
-                    "username" => $username,
-                    "email" => $email,
-                    "password" => $hashedPassword
+            $stmt->execute([
+                "fullname" => $fullname,
+                "username" => $username,
+                "email" => $email,
+                "password" => $hashedPassword
                 ]);
 
                 header("Location: login.php?registered=1");
