@@ -1,7 +1,7 @@
 <?php
 
 $host = "localhost";
-$dbname = "inventari";
+$dbname = "inventari_io";
 $username = "root";
 $password = "";
 
@@ -9,16 +9,14 @@ try {
     $pdo = new PDO(
         "mysql:host=$host;dbname=$dbname;charset=utf8mb4",
         $username,
-        $password,
-        [
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-            PDO::ATTR_EMULATE_PREPARES => false
-        ]
+        $password
     );
-} catch (PDOException $e) {
-    error_log($e->getMessage());
 
-    http_response_code(500);
-    exit("Lidhja me databazën dështoi. Kontrollo konfigurimin.");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+} catch (PDOException $e) {
+    die("Gabim në lidhjen me databazën: " . $e->getMessage());
 }
+
+?>
