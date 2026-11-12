@@ -173,12 +173,12 @@ function statusClass(string $status): string {
                 Dashboard
             </a>
 
-            <a class="nav-link" href="products.php">
+            <a class="nav-link" href="invertari.html">
                 <i data-lucide="package"></i>
                 Produktet
             </a>
 
-            <a class="nav-link" href="orders.php">
+            <a class="nav-link" href="porosite.php">
                 <i data-lucide="shopping-cart"></i>
                 Porositë
             </a>
@@ -193,7 +193,7 @@ function statusClass(string $status): string {
                 Raportet
             </a>
 
-            <a class="nav-link" href="settings.php">
+            <a class="nav-link" href="cilsimet.php">
                 <i data-lucide="settings"></i>
                 Cilësimet
             </a>
