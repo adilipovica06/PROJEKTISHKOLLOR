@@ -325,7 +325,7 @@ button:hover, .button:hover {
 
 <aside class="sidebar">
     <div class="logo">⬡ Inventari</div>
-    <a href="index.php">⌂ Kreu</a>
+    <a href="dashboard.php">⌂ Dashboard</a>
     <a href="index.php#products">◇ Produktet</a>
     <a href="index.php#notifications">♧ Njoftimet</a>
     <a href="#profile">♙ Profili im</a>
